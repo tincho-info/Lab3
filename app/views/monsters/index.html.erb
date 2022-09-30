@@ -1,1 +1,6 @@
-<%# Update me %><%= @monsters.inspect %>
+<h1>Listing monsters</h1>
+<ul>
+    <% @monsters.each do |monster| %>
+        <li>monste: <%= link_to monster.name, monster %></li>
+    <% end %>
+</ul>
