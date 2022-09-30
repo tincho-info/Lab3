@@ -1,6 +1,10 @@
 <h1>Listing monsters</h1>
 <ul>
     <% @monsters.each do |monster| %>
-        <li>monste: <%= link_to monster.name, monster %></li>
+        <li>Mounstro: <%= link_to monster.name, monster %>
+        <% if monster.tweets.count > 0 %>
+            <span style= "color:red">Twittero destacado</span>
+        <% end %>
+        </li>
     <% end %>
 </ul>
