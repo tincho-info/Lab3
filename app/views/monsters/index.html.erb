@@ -4,7 +4,8 @@
         <li>Mounstro: <%= link_to monster.name, monster %>
         <% if monster.tweets.count > 0 %>
             <span style= "color:red">Twittero destacado</span>
-        <% end %>
+            <% end %>
+            <span><%= button_to "Destruir", monster, method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-outline-danger" %> </span>
         </li>
     <% end %>
 </ul>
